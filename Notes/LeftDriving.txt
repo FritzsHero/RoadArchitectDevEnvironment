@@ -1,0 +1,6 @@
+To suppport left driving:
+
+1. Create var for the RoadSystem
+2. CreateStopSignsAllWayDo in IntersectionObjects handles stop sign creation etc.
+3. Draw stop lines on other side
+4. Draw turn lanes on other side
