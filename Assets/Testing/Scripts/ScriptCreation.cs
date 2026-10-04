@@ -34,6 +34,12 @@ public class ScriptCreation : MonoBehaviour
     }
 
 
+    public void CreateRoad10()
+    {
+        RoadArchitect.Tests.UnitTests.RoadArchitectUnitTest10();
+    }
+
+
     public void UpdateRoadSystem1()
     {
         GameObject roadSystem = GameObject.Find("RoadArchitectSystem1");
@@ -71,6 +77,31 @@ public class ScriptCreation : MonoBehaviour
         GameObject roadSystem = GameObject.Find("RoadArchitectSystem9");
         RoadArchitect.RoadSystem sys = roadSystem.GetComponent<RoadArchitect.RoadSystem>();
         sys.UpdateAllRoads();
+    }
+
+
+    public void UpdateRoadSystem10()
+    {
+        GameObject roadSystem = GameObject.Find("RoadArchitectSystem10");
+        RoadArchitect.RoadSystem sys = roadSystem.GetComponent<RoadArchitect.RoadSystem>();
+        sys.UpdateAllRoads();
+    }
+
+
+    public void ResetTester()
+    {
+        GameObject tester = GameObject.Find("Car");
+        Vector3 position = new Vector3();
+        position.x = 713;
+        position.y = 0.17f;
+        position.z = 555;
+        Vector3 eulerAngles = new Vector3();
+        eulerAngles.x = 0;
+        eulerAngles.y = -90;
+        eulerAngles.z = 0;
+        tester.transform.position = position;
+        tester.transform.eulerAngles = eulerAngles;
+        // TODO: reset forces
     }
 }
 #endif
